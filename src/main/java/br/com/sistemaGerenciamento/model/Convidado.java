@@ -1,15 +1,30 @@
 package br.com.sistemaGerenciamento.model;
 
 
-public class Convidado {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Convidado implements Serializable {
+
+    private static final Long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private int qtdeConvidado;
+    private int qtdeAcompanhantes;
 
-    public Convidado(Long id, String nome, int qtdeConvidado) {
-        this.id = id;
+    public Convidado() {
+    }
+
+    public Convidado(String nome, int qtdeAcompanhantes) {
+
         this.nome = nome;
-        this.qtdeConvidado = qtdeConvidado;
+        this.qtdeAcompanhantes = qtdeAcompanhantes;
     }
 
     public Long getId() {
@@ -28,11 +43,11 @@ public class Convidado {
         this.nome = nome;
     }
 
-    public int getQtdeConvidado() {
-        return qtdeConvidado;
+    public int getQtdeAcompanhantes() {
+        return qtdeAcompanhantes;
     }
 
-    public void setQtdeConvidado(int qtdeConvidado) {
-        this.qtdeConvidado = qtdeConvidado;
+    public void setQtdeAcompanhantes(int qtdeAcompanhantes) {
+        this.qtdeAcompanhantes = qtdeAcompanhantes;
     }
 }

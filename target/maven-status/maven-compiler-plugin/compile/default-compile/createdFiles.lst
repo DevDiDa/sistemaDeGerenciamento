@@ -1,2 +1,5 @@
+br/com/sistemaGerenciamento/repository/ConvidadoRepository.class
 br/com/sistemaGerenciamento/controller/ConvidadoController.class
+br/com/sistemaGerenciamento/model/Convidado.class
+br/com/sistemaGerenciamento/iniciar/EnviarConvidado.class
 br/com/sistemaGerenciamento/SistemaGerenciamentoApplication.class
